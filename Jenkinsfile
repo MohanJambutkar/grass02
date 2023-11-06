@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+parameters {
+  choice choices: ['TEST', 'STAGE', 'DEV', 'QA', 'PROD'], name: 'ENV'
+}
+
 triggers {
         pollSCM('*/1 * * * *') // This sets up polling SCM to check for changes every minute
     }
