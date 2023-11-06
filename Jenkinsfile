@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh ' /home/mohan/Documents/Extracted_files/apache-maven-3.9.5/mvn install'
+                sh ' /home/mohan/Documents/Extracted_files/apache-maven-3.9.5/bin/mvn install'
             }
         }
         stage('Deployment') {
