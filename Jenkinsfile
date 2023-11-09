@@ -27,7 +27,7 @@ triggers {
         }
         stage('slack notification') {
             steps {
-                slackSend baseUrl: 'https://hooks.slack.com/services/', botUser: true, channel: '# test', color: 'good ', message: 'env dev ', notifyCommitters: true, teamDomain: 'Dev', tokenCredentialId: 'testtocken'
+                slackSend baseUrl: 'https://hooks.slack.com/services/', botUser: true, channel: '# test', color: 'good ', message: 'env dev ', notifyCommitters: true, teamDomain: 'Dev', tokenCredentialId: 'testtocken02'
          }
         }
     }
