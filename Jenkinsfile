@@ -25,6 +25,10 @@ triggers {
                 sh 'cp target/grass02.war /home/mohan/Documents/Extracted_files/apache-tomcat-9.0.82/webapps ' 
             }
         }
+        stage('slack notification') {
+            steps {
+                slackSend baseUrl: 'https://hooks.slack.com/services/', channel: '# test', color: 'good ', message: 'env dev ', teamDomain: 'Dev', tokenCredentialId: 'testtocken'            }
+        }
     }
 }
 
